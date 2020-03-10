@@ -5,11 +5,10 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_weight">My Weight</string>
     <string name="menu_eclipses">Next Eclipses</string>
-    <string name="menu_config">Settings and Info</string>
+    <string name="menu_config">Info</string>
 
     <string name="home_second">Home Second</string>
 </resources>

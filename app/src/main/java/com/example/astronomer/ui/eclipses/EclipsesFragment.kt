@@ -22,10 +22,6 @@ class EclipsesFragment : Fragment() {
         eclipsesViewModel =
                 ViewModelProviders.of(this).get(EclipsesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_eclipses, container, false)
-        val textView: TextView = root.findViewById(R.id.text_eclipses)
-        eclipsesViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }
