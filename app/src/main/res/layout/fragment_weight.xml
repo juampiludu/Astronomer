@@ -33,7 +33,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Your weight (kg):"
+                    android:text="@string/weight1"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
 
@@ -52,7 +52,8 @@
                         android:gravity="center"
                         android:inputType="numberDecimal"
                         android:textColor="#FFFFFF"
-                        android:textColorHighlight="@color/design_default_color_background"
+                        android:textColorHint="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
                         android:textColorLink="#FFFFFF" />
 
                     <Button
@@ -61,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10px"
                         android:layout_weight="1"
-                        android:text="Calculate!"
+                        android:text="@string/weight_button"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp"
                         android:background="@drawable/button_weight_shape"/>
@@ -82,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Your weight is:"
+                    android:text="@string/weight2"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
@@ -99,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Mercury"
+                        android:text="@string/weight3"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -134,7 +135,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Venus"
+                        android:text="@string/weight4"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -169,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Mars"
+                        android:text="@string/weight5"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -204,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Jupiter"
+                        android:text="@string/weight6"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -239,7 +240,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Saturn"
+                        android:text="@string/weight7"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -274,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Uranus"
+                        android:text="@string/weight8"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -309,7 +310,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Neptune"
+                        android:text="@string/weight9"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -344,7 +345,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Pluto"
+                        android:text="@string/weight10"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -379,7 +380,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Moon"
+                        android:text="@string/weight11"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 

@@ -1,6 +1,8 @@
 package com.example.astronomer.ui.weight
 
 import android.os.Bundle
+import android.text.Layout
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,11 +46,13 @@ class WeightFragment : Fragment() {
         buttonWeight.setOnClickListener {
 
             val weight = editWeight.text.toString()
-            if (weight.equals("")) {
-                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty", Toast.LENGTH_LONG)
+            if (weight.equals("") && weight.equals(".")) {
+                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty or have only a point", Toast.LENGTH_LONG)
+                toast.setGravity(Gravity.CENTER, 0, 0)
                 toast.show()
             } else if (weight.length > 10) {
-                val toast1 = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_SHORT)
+                val toast1 = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_LONG)
+                toast1.setGravity(Gravity.CENTER, 0, 0)
                 toast1.show()
             } else {
 
