@@ -1,12 +1,16 @@
 package com.example.astronomer.ui.weight
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.Planets
@@ -54,13 +58,15 @@ class WeightFragment : Fragment() {
             val op9 = (weight.toFloat()*planets.moon) / planets.earth
             textMercury.text = "%.2f".format(op1) + " kg"
             textVenus.text = "%.2f".format(op2) + " kg"
-            textMars.text = "%.2f".format(op2) + " kg"
-            textJupiter.text = "%.2f".format(op2) + " kg"
-            textSaturn.text = "%.2f".format(op2) + " kg"
-            textUranus.text = "%.2f".format(op2) + " kg"
-            textNeptune.text = "%.2f".format(op2) + " kg"
-            textPluto.text = "%.2f".format(op2) + " kg"
-            textMoon.text = "%.2f".format(op2) + " kg"
+            textMars.text = "%.2f".format(op3) + " kg"
+            textJupiter.text = "%.2f".format(op4) + " kg"
+            textSaturn.text = "%.2f".format(op5) + " kg"
+            textUranus.text = "%.2f".format(op6) + " kg"
+            textNeptune.text = "%.2f".format(op7) + " kg"
+            textPluto.text = "%.2f".format(op8) + " kg"
+            textMoon.text = "%.2f".format(op9) + " kg"
+
+            editWeight.onEditorAction(EditorInfo.IME_ACTION_DONE)
 
         }
 
