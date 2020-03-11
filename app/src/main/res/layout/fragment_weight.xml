@@ -62,7 +62,9 @@
                         android:layout_marginTop="10px"
                         android:layout_weight="1"
                         android:text="Calculate!"
-                        android:textSize="14sp" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:background="@drawable/button_weight_shape"/>
 
                 </LinearLayout>
 

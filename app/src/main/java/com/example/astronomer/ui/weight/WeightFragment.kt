@@ -1,16 +1,14 @@
 package com.example.astronomer.ui.weight
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.core.content.ContextCompat.getSystemService
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.Planets
@@ -45,28 +43,38 @@ class WeightFragment : Fragment() {
 
         buttonWeight.setOnClickListener {
 
-            val weight = editWeight.text.toString()
-            weight.toFloat()
-            val op1 = (weight.toFloat()*planets.mercury) / planets.earth
-            val op2 = (weight.toFloat()*planets.venus) / planets.earth
-            val op3 = (weight.toFloat()*planets.mars) / planets.earth
-            val op4 = (weight.toFloat()*planets.jupiter) / planets.earth
-            val op5 = (weight.toFloat()*planets.saturn) / planets.earth
-            val op6 = (weight.toFloat()*planets.uranus) / planets.earth
-            val op7 = (weight.toFloat()*planets.neptune) / planets.earth
-            val op8 = (weight.toFloat()*planets.pluto) / planets.earth
-            val op9 = (weight.toFloat()*planets.moon) / planets.earth
-            textMercury.text = "%.2f".format(op1) + " kg"
-            textVenus.text = "%.2f".format(op2) + " kg"
-            textMars.text = "%.2f".format(op3) + " kg"
-            textJupiter.text = "%.2f".format(op4) + " kg"
-            textSaturn.text = "%.2f".format(op5) + " kg"
-            textUranus.text = "%.2f".format(op6) + " kg"
-            textNeptune.text = "%.2f".format(op7) + " kg"
-            textPluto.text = "%.2f".format(op8) + " kg"
-            textMoon.text = "%.2f".format(op9) + " kg"
+            if (editWeight.text.equals("")) {
+                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty", Toast.LENGTH_SHORT)
+                toast.show()
+            } else if (editWeight.text.length > 10) {
+                val toast1 = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_SHORT)
+                toast1.show()
+            } else {
 
-            editWeight.onEditorAction(EditorInfo.IME_ACTION_DONE)
+                val weight = editWeight.text.toString()
+                weight.toFloat()
+                val op1 = (weight.toFloat() * planets.mercury) / planets.earth
+                val op2 = (weight.toFloat() * planets.venus) / planets.earth
+                val op3 = (weight.toFloat() * planets.mars) / planets.earth
+                val op4 = (weight.toFloat() * planets.jupiter) / planets.earth
+                val op5 = (weight.toFloat() * planets.saturn) / planets.earth
+                val op6 = (weight.toFloat() * planets.uranus) / planets.earth
+                val op7 = (weight.toFloat() * planets.neptune) / planets.earth
+                val op8 = (weight.toFloat() * planets.pluto) / planets.earth
+                val op9 = (weight.toFloat() * planets.moon) / planets.earth
+                textMercury.text = "%.2f".format(op1) + " kg"
+                textVenus.text = "%.2f".format(op2) + " kg"
+                textMars.text = "%.2f".format(op3) + " kg"
+                textJupiter.text = "%.2f".format(op4) + " kg"
+                textSaturn.text = "%.2f".format(op5) + " kg"
+                textUranus.text = "%.2f".format(op6) + " kg"
+                textNeptune.text = "%.2f".format(op7) + " kg"
+                textPluto.text = "%.2f".format(op8) + " kg"
+                textMoon.text = "%.2f".format(op9) + " kg"
+
+                editWeight.onEditorAction(EditorInfo.IME_ACTION_DONE)
+
+            }
 
         }
 
