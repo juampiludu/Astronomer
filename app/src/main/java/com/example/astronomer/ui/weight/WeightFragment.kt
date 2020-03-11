@@ -43,15 +43,15 @@ class WeightFragment : Fragment() {
 
         buttonWeight.setOnClickListener {
 
-            if (editWeight.text.equals("")) {
-                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty", Toast.LENGTH_SHORT)
+            val weight = editWeight.text.toString()
+            if (weight.equals("")) {
+                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty", Toast.LENGTH_LONG)
                 toast.show()
-            } else if (editWeight.text.length > 10) {
+            } else if (weight.length > 10) {
                 val toast1 = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_SHORT)
                 toast1.show()
             } else {
 
-                val weight = editWeight.text.toString()
                 weight.toFloat()
                 val op1 = (weight.toFloat() * planets.mercury) / planets.earth
                 val op2 = (weight.toFloat() * planets.venus) / planets.earth

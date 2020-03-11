@@ -11,4 +11,12 @@
     <string name="menu_config">Info</string>
 
     <string name="home_second">Home Second</string>
+
+    <string name="eclipse_1">January 10, 2020: Penumbral Lunar Eclipse</string>
+    <string name="eclipse_2">June 5, 2020: Penumbral Lunar Eclipse</string>
+    <string name="eclipse_3">June 21, 2020: Solar Eclipse Annular</string>
+    <string name="eclipse_4">July 5, 2020: Penumbral Lunar Eclipse</string>
+    <string name="eclipse_5">November 30, 2020: Penumbral Lunar Eclipse</string>
+    <string name="eclipse_6">December 14: Total Eclipse of the Sun</string>
+    <string name="eclipse_7">More information in timeanddate.com website:</string>
 </resources>
