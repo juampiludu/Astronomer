@@ -1,9 +1,6 @@
 package com.example.astronomer
 
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
+import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -11,8 +8,11 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
+import java.text.SimpleDateFormat
+import java.util.*
 
-class ReminderActivity : AppCompatActivity() {
+class ReminderActivity : AppCompatActivity()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -30,6 +30,36 @@ class ReminderActivity : AppCompatActivity() {
         actionBar!!.title = "Reminder"
 
         actionBar.setDisplayHomeAsUpEnabled(true)
+
+        val cal = Calendar.getInstance()
+        val dateButton: Button = findViewById(R.id.dateButton)
+        val dateView: TextView = findViewById(R.id.dateView)
+        val timeButton: Button = findViewById(R.id.timeButton)
+        val timeView: TextView = findViewById(R.id.timeView)
+
+        timeButton.setOnClickListener {
+
+            val timeSetListener = TimePickerDialog.OnTimeSetListener{timePicker, hour, minute ->
+
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minute)
+
+                timeView.text = SimpleDateFormat("HH:mm").format(cal.time)
+            }
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
+        }
+
+        dateButton.setOnClickListener {
+
+            val year = cal.get(Calendar.YEAR)
+            val month = cal.get(Calendar.MONTH)
+            val day = cal.get(Calendar.DAY_OF_MONTH)
+
+            val date =  DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view, mYear, mMonth, mDay ->
+                dateView.text = "$mDay/$mMonth/$mYear"
+            }, year, month, day)
+            date.show()
+        }
 
         val notifButton: Button = findViewById(R.id.notifButton)
         notifButton.setOnClickListener {
@@ -62,6 +92,8 @@ class ReminderActivity : AppCompatActivity() {
                 notificationManager.notify(0, builder.build())
             }
         }
+
+
 
     }
 
