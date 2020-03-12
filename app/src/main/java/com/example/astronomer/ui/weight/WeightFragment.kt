@@ -46,8 +46,12 @@ class WeightFragment : Fragment() {
         buttonWeight.setOnClickListener {
 
             val weight = editWeight.text.toString()
-            if (weight.equals("") && weight.equals(".")) {
-                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty or have only a point", Toast.LENGTH_LONG)
+            if (weight.equals(".")) {
+                val toast = Toast.makeText(this.context, "The input cannot have only a point", Toast.LENGTH_LONG)
+                toast.setGravity(Gravity.CENTER, 0, 0)
+                toast.show()
+            } else if (weight.equals("")) {
+                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty", Toast.LENGTH_LONG)
                 toast.setGravity(Gravity.CENTER, 0, 0)
                 toast.show()
             } else if (weight.length > 10) {

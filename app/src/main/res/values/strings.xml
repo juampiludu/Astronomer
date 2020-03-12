@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">Astronomer - My weight in other planets!</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
 
     <string name="menu_weight">My Weight</string>
     <string name="menu_eclipses">Next Eclipses</string>
-    <string name="menu_config">Info</string>
+    <string name="menu_config">Info.</string>
 
-    <string name="home_second">Home Second</string>
+    <string name="home_second" translatable="false">Home Second</string>
 
     <string name="weight1">Your weight (kg):</string>
     <string name="weight2">Your weight is:</string>
@@ -36,6 +36,6 @@
     <string name="general_info">The equation to know your weight in other planets is:</string>
     <string name="general_info2">- (*YourWeight(kg)* x *TheGravityAcelerationOfSomePlanet*) / *EarthGravityAceleration* -</string>
     <string name="general_info3">For example in Mars:</string>
-    <string name="general_info4">(70 kg * 3.711 m/s2) / 9.807 m/s2 = 26.49 kg</string>
+    <string name="general_info4" translatable="false">(70 kg * 3.711 m/s2) / 9.807 m/s2 = 26.49 kg</string>
     <string name="email_info">Support email</string>
 </resources>
