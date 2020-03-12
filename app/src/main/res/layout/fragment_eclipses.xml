@@ -9,11 +9,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,19 +128,14 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60px"
-                android:layout_marginBottom="60px"
-                android:gravity="center"
-                android:text="@string/eclipse_8"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
-
-        </LinearLayout>200px
+        </LinearLayout>
     </ScrollView>
+
+    <include
+        layout="@layout/fab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="644dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

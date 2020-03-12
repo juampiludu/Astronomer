@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Astronomer - My weight in other planets!</string>
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-    <string name="nav_header_title" translatable="false">Android Studio</string>
-    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="app_name" translatable="false">Astronomer</string>
+    <string name="nav_header_title" translatable="false">Astronomer</string>
+    <string name="nav_header_subtitle">My weight in other planets!</string>
     <string name="nav_header_desc" translatable="false">Navigation header</string>
 
     <string name="menu_weight">My Weight</string>
@@ -32,7 +30,6 @@
     <string name="eclipse_5">November 30, 2020: Penumbral Lunar Eclipse</string>
     <string name="eclipse_6">December 14: Total Eclipse of the Sun</string>
     <string name="eclipse_7">More information in timeanddate.com website:</string>
-    <string name="eclipse_8">Press + button to add a reminder</string>
 
     <string name="general_info">The equation to know your weight in other planets is:</string>
     <string name="general_info2">- (*YourWeight(kg)* x *TheGravityAcelerationOfSomePlanet*) / *EarthGravityAceleration* -</string>

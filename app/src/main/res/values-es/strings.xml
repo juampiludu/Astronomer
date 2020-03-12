@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Astronomer - ¡Mi peso en otros planetas!</string>
     <string name="menu_weight">Mi Peso</string>
     <string name="menu_eclipses">Próximos Eclipses</string>
     <string name="menu_config">Info.</string>
@@ -27,5 +26,5 @@
     <string name="general_info2">- (*TuPeso(kg)* x *LaAceleraciónGravitatoriaDeAlgúnPlaneta*) / *AceleraciónGravitatoriaDeLaTierra* -</string>
     <string name="general_info3">Por ejemplo en Marte:</string>
     <string name="email_info">Email de soporte</string>
-    <string name="eclipse_8">Presioná el botón + para agregar un recordatorio</string>
+    <string name="nav_header_subtitle">¡Mi peso en otros planetas!</string>
 </resources>
