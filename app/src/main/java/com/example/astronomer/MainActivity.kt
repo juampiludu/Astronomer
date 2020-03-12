@@ -1,5 +1,6 @@
 package com.example.astronomer
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
 
-            
+            val intent = Intent(this, ReminderActivity::class.java)
+            startActivity(intent)
 
         }
 

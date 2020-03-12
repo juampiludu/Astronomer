@@ -27,4 +27,5 @@
     <string name="general_info2">- (*TuPeso(kg)* x *LaAceleraciónGravitatoriaDeAlgúnPlaneta*) / *AceleraciónGravitatoriaDeLaTierra* -</string>
     <string name="general_info3">Por ejemplo en Marte:</string>
     <string name="email_info">Email de soporte</string>
+    <string name="eclipse_8">Presioná el botón + para agregar un recordatorio</string>
 </resources>
