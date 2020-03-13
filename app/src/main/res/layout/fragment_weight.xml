@@ -55,7 +55,7 @@
                         android:textColorHint="#FFFFFF"
                         android:textColorHighlight="#FFFFFF"
                         android:textColorLink="#FFFFFF">
-                        <!--<requestFocus/>-->
+                        <requestFocus/>
                     </EditText>
 
                     <Button
