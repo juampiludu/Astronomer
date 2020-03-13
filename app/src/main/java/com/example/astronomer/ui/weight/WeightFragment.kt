@@ -1,7 +1,6 @@
 package com.example.astronomer.ui.weight
 
 import android.os.Bundle
-import android.text.Layout
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View

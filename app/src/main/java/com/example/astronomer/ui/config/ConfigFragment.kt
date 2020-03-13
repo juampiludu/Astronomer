@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.BuildConfig
 import com.example.astronomer.R
@@ -43,8 +42,8 @@ class ConfigFragment : Fragment() {
                 action = Intent.ACTION_SEND
                 data = Uri.parse("mailto:")
                 type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, "<TYPE IN 'to: juanzakka@gmail.com'>")
-                putExtra(Intent.EXTRA_SUBJECT, "<atr-support>")
+                putExtra(Intent.EXTRA_TEXT, "<Type manually in mail to: 'lu.dev.spprt@gmail.com'>")
+                putExtra(Intent.EXTRA_SUBJECT, "<astronomer-support>")
             }
             if (intent.resolveActivity(activity!!.packageManager) != null) {
                 intent.setPackage("com.google.android.gm")

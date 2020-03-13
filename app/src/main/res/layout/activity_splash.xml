@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_light"
         android:gravity="center"
-        android:text="developed by juampiludu"
+        android:text="developed by ludev"
         android:textColor="#B4FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
