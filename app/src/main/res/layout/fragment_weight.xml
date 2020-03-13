@@ -46,7 +46,7 @@
 
                     <EditText
                         android:id="@+id/editWeight"
-                        android:layout_width="wrap_content"
+                        android:layout_width="190dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:gravity="center"
@@ -54,7 +54,9 @@
                         android:textColor="#FFFFFF"
                         android:textColorHint="#FFFFFF"
                         android:textColorHighlight="#FFFFFF"
-                        android:textColorLink="#FFFFFF" />
+                        android:textColorLink="#FFFFFF">
+                        <!--<requestFocus/>-->
+                    </EditText>
 
                     <Button
                         android:id="@+id/buttonWeight"

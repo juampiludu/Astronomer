@@ -27,4 +27,5 @@
     <string name="general_info3">Por ejemplo en Marte:</string>
     <string name="email_info">Email de soporte</string>
     <string name="nav_header_subtitle">¡Mi peso en otros planetas!</string>
+    <string name="version_text"><![CDATA[<u>Versión</u>]]></string>
 </resources>
