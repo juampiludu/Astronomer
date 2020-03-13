@@ -86,8 +86,8 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/gmail" />
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_gmail" />
     </LinearLayout>
 
     <TextView

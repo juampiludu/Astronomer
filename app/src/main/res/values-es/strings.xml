@@ -21,7 +21,7 @@
     <string name="eclipse_4">5 de julio de 2020: Eclipse Lunar Penumbral</string>
     <string name="eclipse_5">30 de noviembre de 2020: Eclipse Lunar Penumbral</string>
     <string name="eclipse_6">14 de diciembre: Eclipse Total de Sol</string>
-    <string name="eclipse_7">Más información en la página timeanddate.com:</string>
+    <string name="eclipse_7">Más información en el sitio  timeanddate.com:</string>
     <string name="general_info">La ecuación para saber tu peso en otros planetas es:</string>
     <string name="general_info2">- (*TuPeso(kg)* x *LaAceleraciónGravitatoriaDeAlgúnPlaneta*) / *AceleraciónGravitatoriaDeLaTierra* -</string>
     <string name="general_info3">Por ejemplo en Marte:</string>
