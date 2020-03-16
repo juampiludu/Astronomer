@@ -1,16 +1,15 @@
 package com.example.astronomer.ui.config
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.text.Html
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.BuildConfig
@@ -38,22 +37,26 @@ class ConfigFragment : Fragment() {
 
         emailButton.setOnClickListener {
 
-            val intent = Intent().apply {
-                action = Intent.ACTION_SEND
-                data = Uri.parse("mailto:")
-                type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, "<Type manually in mail to: 'lu.dev.spprt@gmail.com'>")
-                putExtra(Intent.EXTRA_SUBJECT, "<astronomer-support>")
-            }
-            if (intent.resolveActivity(activity!!.packageManager) != null) {
-                intent.setPackage("com.google.android.gm")
-                startActivity(intent)
-            } else {
-                Log.d(TAG, "No app available to send email.")
-            }
+            sendEmail()
 
         }
 
         return root
     }
+
+    private fun sendEmail() {
+
+        val mailto = "lu.dev.spprt@gmail.com"
+        val intent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:")).apply {
+            putExtra(Intent.EXTRA_EMAIL, arrayOf("$mailto"))
+            putExtra(Intent.EXTRA_SUBJECT, "<astronomer-support>")
+        }
+        try {
+            startActivity(Intent.createChooser(intent, "Choose Email Client"))
+        } catch (e: Exception) {
+            Toast.makeText(this.context, e.message, Toast.LENGTH_LONG).show()
+        }
+
+    }
+
 }
