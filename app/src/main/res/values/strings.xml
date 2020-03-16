@@ -23,14 +23,6 @@
     <string name="weight11">Moon</string>
     <string name="weight_button">Calculate!</string>
 
-    <string name="eclipse_1">January 10, 2020: Penumbral Lunar Eclipse</string>
-    <string name="eclipse_2">June 5, 2020: Penumbral Lunar Eclipse</string>
-    <string name="eclipse_3">June 21, 2020: Solar Eclipse Annular</string>
-    <string name="eclipse_4">July 5, 2020: Penumbral Lunar Eclipse</string>
-    <string name="eclipse_5">November 30, 2020: Penumbral Lunar Eclipse</string>
-    <string name="eclipse_6">December 14: Total Eclipse of the Sun</string>
-    <string name="eclipse_7">More information in timeanddate.com website:</string>
-
     <string name="general_info">The equation to know your weight in other planets is:</string>
     <string name="general_info2">- (*YourWeight(kg)* x *TheGravityAcelerationOfSomePlanet*) / *EarthGravityAceleration* -</string>
     <string name="general_info3">For example in Mars:</string>

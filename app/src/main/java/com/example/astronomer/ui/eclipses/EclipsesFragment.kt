@@ -1,13 +1,14 @@
 package com.example.astronomer.ui.eclipses
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.provider.CalendarContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -29,15 +30,16 @@ class EclipsesFragment : Fragment() {
 
         Toast.makeText(this.context, "Press + to add an event", Toast.LENGTH_LONG).show()
 
-        val imageButton: ImageButton = root.findViewById(R.id.imageButton)
+        val webView: WebView = root.findViewById(R.id.webView)
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("https://www.timeanddate.com/eclipse/2020")
 
-        imageButton.setOnClickListener {
-
-            val openUrl =  Intent(android.content.Intent.ACTION_VIEW)
-            openUrl.data = Uri.parse("https://www.timeanddate.com/eclipse/2020")
-            startActivity(openUrl)
-
-        }
+        val webSettings: WebSettings = webView.settings
+        webSettings.domStorageEnabled = true
+        webSettings.setAppCacheEnabled(true)
+        webSettings.loadsImagesAutomatically = true
+        webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+        webSettings.javaScriptEnabled = true
 
         val fab: FloatingActionButton = root.findViewById(R.id.fab)
 
@@ -52,5 +54,15 @@ class EclipsesFragment : Fragment() {
         }
 
         return root
+
     }
+
+    //fun canGoBack(): Boolean {
+      //  return webView.canGoBack()
+    //}
+
+    //fun goBack() {
+      //  webView.goBack()
+    //}
+
 }

@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.astronomer.ui.eclipses.EclipsesFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    //val eclipsesFragment = EclipsesFragment()
+
+    //override fun onBackPressed() {
+        //if (eclipsesFragment.canGoBack()){
+          //  eclipsesFragment.goBack()
+        //} else {
+          //  super.onBackPressed()
+        //}
+    //}
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
