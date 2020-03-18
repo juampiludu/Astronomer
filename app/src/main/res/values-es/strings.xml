@@ -16,7 +16,6 @@
     <string name="weight11">Luna</string>
     <string name="weight_button">¡Calcular!</string>
     <string name="general_info">La ecuación para saber tu peso en otros planetas es:</string>
-    <string name="general_info2">- (*TuPeso(kg)* x *LaAceleraciónGravitatoriaDeAlgúnPlaneta*) / *AceleraciónGravitatoriaDeLaTierra* -</string>
     <string name="general_info3">Por ejemplo en Marte:</string>
     <string name="email_info">Email de soporte</string>
     <string name="nav_header_subtitle">¡Mi peso en otros planetas!</string>

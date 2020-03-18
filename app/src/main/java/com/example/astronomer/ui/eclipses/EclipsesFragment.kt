@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_eclipses.*
 
 class EclipsesFragment : Fragment() {
@@ -29,8 +28,6 @@ class EclipsesFragment : Fragment() {
         eclipsesViewModel =
             ViewModelProviders.of(this).get(EclipsesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_eclipses, container, false)
-
-        Toast.makeText(this.context, "Press + to add an event", Toast.LENGTH_LONG).show()
 
         val webView: WebView = root.findViewById(R.id.webView)
         webView.webViewClient = WebViewClient()
@@ -71,19 +68,22 @@ class EclipsesFragment : Fragment() {
             return@OnNavigationItemSelectedListener true
         })
 
-
         return root
     }
 
-        private fun goBack() {
-            if (webView.canGoBack()) {
-                webView.goBack()
-            }
+    private fun goBack() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            Toast.makeText(this.context, "No pages back", Toast.LENGTH_SHORT).show()
         }
+    }
 
-        private fun goNext() {
-            if (webView.canGoForward()) {
-                webView.goForward()
-            }
+    private fun goNext() {
+        if (webView.canGoForward()) {
+            webView.goForward()
+        } else {
+            Toast.makeText(this.context, "No pages forward", Toast.LENGTH_SHORT).show()
         }
+    }
 }

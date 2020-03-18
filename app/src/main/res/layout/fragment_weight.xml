@@ -58,16 +58,17 @@
                         <requestFocus/>
                     </EditText>
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/buttonWeight"
                         android:layout_width="212dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10px"
-                        android:layout_weight="1"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/weight_button"
+                        app:cornerRadius="32dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        android:background="@drawable/button_weight_shape"/>
+                        android:textSize="18sp"/>
 
                 </LinearLayout>
 
@@ -76,7 +77,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80px"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView

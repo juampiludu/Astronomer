@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.Planets
 import com.example.astronomer.R
 import com.example.astronomer.Planets.*
+import com.google.android.material.button.MaterialButton
 
 class WeightFragment : Fragment() {
 
@@ -30,7 +31,7 @@ class WeightFragment : Fragment() {
 
 
         val editWeight: EditText = root.findViewById(R.id.editWeight)
-        val buttonWeight: Button = root.findViewById(R.id.buttonWeight)
+        val buttonWeight: MaterialButton = root.findViewById(R.id.buttonWeight)
         val textMercury: TextView = root.findViewById(R.id.textMercury)
         val textVenus: TextView = root.findViewById(R.id.textVenus)
         val textMars: TextView = root.findViewById(R.id.textMars)
@@ -54,9 +55,9 @@ class WeightFragment : Fragment() {
                 toast.setGravity(Gravity.CENTER, 0, 0)
                 toast.show()
             } else if (weight.length > 10) {
-                val toast1 = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_LONG)
-                toast1.setGravity(Gravity.CENTER, 0, 0)
-                toast1.show()
+                val toast = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_LONG)
+                toast.setGravity(Gravity.CENTER, 0, 0)
+                toast.show()
             } else {
 
                 weight.toFloat()

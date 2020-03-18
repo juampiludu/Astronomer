@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.BuildConfig
 import com.example.astronomer.R
+import com.google.android.material.button.MaterialButton
 
 class ConfigFragment : Fragment() {
 
@@ -28,7 +29,7 @@ class ConfigFragment : Fragment() {
                 ViewModelProviders.of(this).get(ConfigViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_config, container, false)
 
-        val emailButton: ImageButton = root.findViewById(R.id.emailButton)
+        val emailButton: MaterialButton = root.findViewById(R.id.emailButton)
         val textView27: TextView = root.findViewById(R.id.textView27)
         val textVersion: TextView = root.findViewById(R.id.textVersion)
 
