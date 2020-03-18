@@ -21,4 +21,7 @@
     <string name="email_info">Email de soporte</string>
     <string name="nav_header_subtitle">¡Mi peso en otros planetas!</string>
     <string name="version_text"><![CDATA[<u>Versión</u>]]></string>
+    <string name="back">atrás</string>
+    <string name="event">nuevo evento</string>
+    <string name="next">siguiente</string>
 </resources>

@@ -23,6 +23,10 @@
     <string name="weight11">Moon</string>
     <string name="weight_button">Calculate!</string>
 
+    <string name="back">back</string>
+    <string name="event">new event</string>
+    <string name="next">next</string>
+
     <string name="general_info">The equation to know your weight in other planets is:</string>
     <string name="general_info2">- (*YourWeight(kg)* x *TheGravityAcelerationOfSomePlanet*) / *EarthGravityAceleration* -</string>
     <string name="general_info3">For example in Mars:</string>

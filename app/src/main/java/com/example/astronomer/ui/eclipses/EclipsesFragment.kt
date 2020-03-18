@@ -13,7 +13,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.fragment_eclipses.*
 
 class EclipsesFragment : Fragment() {
 
@@ -25,7 +27,7 @@ class EclipsesFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         eclipsesViewModel =
-                ViewModelProviders.of(this).get(EclipsesViewModel::class.java)
+            ViewModelProviders.of(this).get(EclipsesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_eclipses, container, false)
 
         Toast.makeText(this.context, "Press + to add an event", Toast.LENGTH_LONG).show()
@@ -41,28 +43,47 @@ class EclipsesFragment : Fragment() {
         webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
         webSettings.javaScriptEnabled = true
 
-        val fab: FloatingActionButton = root.findViewById(R.id.fab)
+        val bottomNav: BottomNavigationView = root.findViewById(R.id.bottomNav)
 
-        fab.setOnClickListener { view ->
+        bottomNav.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener {
 
-            val intent = Intent(Intent.ACTION_INSERT)
-                .setData(CalendarContract.Events.CONTENT_URI)
-                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, System.currentTimeMillis())
-                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, System.currentTimeMillis() + (60*60*1000))
-            startActivity(intent)
+            when (it.itemId) {
 
-        }
+                R.id.back -> goBack()
+
+                R.id.event -> {
+                    val intent = Intent(Intent.ACTION_INSERT)
+                        .setData(CalendarContract.Events.CONTENT_URI)
+                        .putExtra(
+                            CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                            System.currentTimeMillis()
+                        )
+                        .putExtra(
+                            CalendarContract.EXTRA_EVENT_END_TIME,
+                            System.currentTimeMillis() + (60 * 60 * 1000)
+                        )
+                    startActivity(intent)
+                }
+
+                R.id.next -> goNext()
+
+            }
+            return@OnNavigationItemSelectedListener true
+        })
+
 
         return root
-
     }
 
-    //fun canGoBack(): Boolean {
-      //  return webView.canGoBack()
-    //}
+        private fun goBack() {
+            if (webView.canGoBack()) {
+                webView.goBack()
+            }
+        }
 
-    //fun goBack() {
-      //  webView.goBack()
-    //}
-
+        private fun goNext() {
+            if (webView.canGoForward()) {
+                webView.goForward()
+            }
+        }
 }

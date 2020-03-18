@@ -33,16 +33,6 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    //val eclipsesFragment = EclipsesFragment()
-
-    //override fun onBackPressed() {
-        //if (eclipsesFragment.canGoBack()){
-          //  eclipsesFragment.goBack()
-        //} else {
-          //  super.onBackPressed()
-        //}
-    //}
-
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
