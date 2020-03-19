@@ -16,6 +16,8 @@ import com.example.astronomer.Planets
 import com.example.astronomer.R
 import com.example.astronomer.Planets.*
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class WeightFragment : Fragment() {
 
@@ -30,7 +32,7 @@ class WeightFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_weight, container, false)
 
 
-        val editWeight: EditText = root.findViewById(R.id.editWeight)
+        val editWeight: TextInputLayout = root.findViewById(R.id.editWeight)
         val buttonWeight: MaterialButton = root.findViewById(R.id.buttonWeight)
         val textMercury: TextView = root.findViewById(R.id.textMercury)
         val textVenus: TextView = root.findViewById(R.id.textVenus)
@@ -45,7 +47,7 @@ class WeightFragment : Fragment() {
 
         buttonWeight.setOnClickListener {
 
-            val weight = editWeight.text.toString()
+            val weight = editWeight.editText?.text.toString()
             if (weight.equals(".")) {
                 val toast = Toast.makeText(this.context, "The input cannot have only a point", Toast.LENGTH_LONG)
                 toast.setGravity(Gravity.CENTER, 0, 0)
@@ -80,7 +82,7 @@ class WeightFragment : Fragment() {
                 textPluto.text = "%.2f".format(op8) + " kg"
                 textMoon.text = "%.2f".format(op9) + " kg"
 
-                editWeight.onEditorAction(EditorInfo.IME_ACTION_DONE)
+                //editWeight.onEditorAction(EditorInfo.IME_ACTION_DONE)
 
             }
 

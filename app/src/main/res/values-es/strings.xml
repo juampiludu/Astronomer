@@ -3,7 +3,7 @@
     <string name="menu_weight">Mi Peso</string>
     <string name="menu_eclipses">Próximos Eclipses</string>
     <string name="menu_config">Info.</string>
-    <string name="weight1">Tu peso (kg):</string>
+    <string name="weight1">Ingrese Su Peso en kg:</string>
     <string name="weight2">Tu peso es:</string>
     <string name="weight3">Mercurio</string>
     <string name="weight4">Venus</string>

@@ -10,7 +10,7 @@
 
     <string name="home_second" translatable="false">Home Second</string>
 
-    <string name="weight1">Your weight (kg):</string>
+    <string name="weight1">Enter Your Weight in kg:</string>
     <string name="weight2">Your weight is:</string>
     <string name="weight3">Mercury</string>
     <string name="weight4">Venus</string>

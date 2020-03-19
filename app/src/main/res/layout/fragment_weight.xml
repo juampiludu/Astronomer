@@ -29,14 +29,6 @@
                 android:layout_marginRight="10px"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/weight1"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -44,31 +36,42 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/editWeight"
-                        android:layout_width="190dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:gravity="center"
-                        android:inputType="numberDecimal"
-                        android:textColor="#FFFFFF"
+                        app:boxBackgroundColor="@color/material_on_background_emphasis_high_type"
+                        app:boxStrokeColor="#FFFFFF"
+                        app:hintTextColor="#FFFFFF"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="10"
+                        app:counterTextColor="@color/colorAccent"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="#FFFFFF"
                         android:textColorHint="#FFFFFF"
-                        android:textColorHighlight="#FFFFFF"
-                        android:textColorLink="#FFFFFF">
-                        <requestFocus/>
-                    </EditText>
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/weight1"
+                            android:textColor="#FFFFFF"
+                            android:inputType="numberDecimal"
+                            ></com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/buttonWeight"
                         android:layout_width="212dp"
                         android:layout_height="80dp"
                         android:layout_marginTop="10dp"
-                        android:text="@string/weight_button"
-                        app:cornerRadius="32dp"
                         android:backgroundTint="@color/colorPrimary"
                         android:gravity="center"
+                        android:text="@string/weight_button"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        app:cornerRadius="32dp" />
 
                 </LinearLayout>
 
@@ -95,6 +98,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -109,8 +113,9 @@
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/mercury" />
 
@@ -130,6 +135,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -144,8 +150,9 @@
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/venus" />
 
@@ -165,6 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -179,8 +187,9 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/mars" />
 
@@ -200,6 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -214,8 +224,9 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/jupiter" />
 
@@ -235,6 +246,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -249,8 +261,9 @@
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/saturn" />
 
@@ -270,6 +283,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -284,8 +298,9 @@
 
                     <ImageView
                         android:id="@+id/imageView7"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/uranus" />
 
@@ -305,6 +320,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -319,8 +335,9 @@
 
                     <ImageView
                         android:id="@+id/imageView8"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/neptune" />
 
@@ -340,6 +357,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -354,8 +372,9 @@
 
                     <ImageView
                         android:id="@+id/imageView9"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/pluto" />
 
@@ -375,6 +394,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="100px"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -389,8 +409,9 @@
 
                     <ImageView
                         android:id="@+id/imageView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="230dp"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:src="@drawable/moon" />
 
