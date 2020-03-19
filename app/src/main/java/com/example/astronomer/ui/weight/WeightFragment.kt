@@ -1,22 +1,16 @@
 package com.example.astronomer.ui.weight
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.Planets
 import com.example.astronomer.R
 import com.example.astronomer.Planets.*
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class WeightFragment : Fragment() {
@@ -49,17 +43,11 @@ class WeightFragment : Fragment() {
 
             val weight = editWeight.editText?.text.toString()
             if (weight.equals(".")) {
-                val toast = Toast.makeText(this.context, "The input cannot have only a point", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.CENTER, 0, 0)
-                toast.show()
+                editWeight.error = "The input cannot have only a point"
             } else if (weight.equals("")) {
-                val toast = Toast.makeText(this.context, "Enter your weight, the input cannot be empty", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.CENTER, 0, 0)
-                toast.show()
+                editWeight.error = "Enter your weight, the input cannot be empty"
             } else if (weight.length > 10) {
-                val toast = Toast.makeText(this.context, "The input cannot be longer than 10 digits", Toast.LENGTH_LONG)
-                toast.setGravity(Gravity.CENTER, 0, 0)
-                toast.show()
+                editWeight.error = "The input cannot be longer than 10 digits"
             } else {
 
                 weight.toFloat()
@@ -82,7 +70,7 @@ class WeightFragment : Fragment() {
                 textPluto.text = "%.2f".format(op8) + " kg"
                 textMoon.text = "%.2f".format(op9) + " kg"
 
-                //editWeight.onEditorAction(EditorInfo.IME_ACTION_DONE)
+                editWeight.error = null
 
             }
 
