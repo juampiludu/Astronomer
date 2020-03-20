@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/alegreya_sans</item>
+        <item>@font/alegreya_sans_extrabold</item>
+        <item>@font/carrois_gothic_sc</item>
         <item>@font/comfortaa_light</item>
         <item>@font/ubuntu_light</item>
     </array>

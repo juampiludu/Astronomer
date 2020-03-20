@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.Planets
 import com.example.astronomer.R
@@ -25,6 +26,7 @@ class WeightFragment : Fragment() {
         weightViewModel = ViewModelProviders.of(this).get(WeightViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_weight, container, false)
 
+        val fragmentManager: FragmentManager
 
         val editWeight: TextInputLayout = root.findViewById(R.id.editWeight)
         val buttonWeight: MaterialButton = root.findViewById(R.id.buttonWeight)
@@ -50,16 +52,16 @@ class WeightFragment : Fragment() {
                 editWeight.error = "The input cannot be longer than 10 digits"
             } else {
 
-                weight.toFloat()
-                val op1 = (weight.toFloat() * planets.mercury) / planets.earth
-                val op2 = (weight.toFloat() * planets.venus) / planets.earth
-                val op3 = (weight.toFloat() * planets.mars) / planets.earth
-                val op4 = (weight.toFloat() * planets.jupiter) / planets.earth
-                val op5 = (weight.toFloat() * planets.saturn) / planets.earth
-                val op6 = (weight.toFloat() * planets.uranus) / planets.earth
-                val op7 = (weight.toFloat() * planets.neptune) / planets.earth
-                val op8 = (weight.toFloat() * planets.pluto) / planets.earth
-                val op9 = (weight.toFloat() * planets.moon) / planets.earth
+                val wght = weight.toFloat()
+                val op1 = (wght * planets.mercury) / planets.earth
+                val op2 = (wght * planets.venus) / planets.earth
+                val op3 = (wght * planets.mars) / planets.earth
+                val op4 = (wght * planets.jupiter) / planets.earth
+                val op5 = (wght * planets.saturn) / planets.earth
+                val op6 = (wght * planets.uranus) / planets.earth
+                val op7 = (wght * planets.neptune) / planets.earth
+                val op8 = (wght * planets.pluto) / planets.earth
+                val op9 = (wght * planets.moon) / planets.earth
                 textMercury.text = "%.2f".format(op1) + " kg"
                 textVenus.text = "%.2f".format(op2) + " kg"
                 textMars.text = "%.2f".format(op3) + " kg"
@@ -72,10 +74,13 @@ class WeightFragment : Fragment() {
 
                 editWeight.error = null
 
+
+
             }
 
         }
 
         return root
     }
+
 }
