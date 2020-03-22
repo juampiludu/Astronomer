@@ -31,7 +31,8 @@ class EclipsesFragment : Fragment() {
 
         val webView: WebView = root.findViewById(R.id.webView)
         webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://www.timeanddate.com/eclipse/2020")
+        val url = "https://www.timeanddate.com/eclipse/2020"
+        webView.loadUrl(url)
 
         val webSettings: WebSettings = webView.settings
         webSettings.domStorageEnabled = true

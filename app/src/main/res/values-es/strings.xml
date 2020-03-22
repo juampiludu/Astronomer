@@ -3,7 +3,7 @@
     <string name="menu_weight">Mi Peso</string>
     <string name="menu_eclipses">Próximos Eclipses</string>
     <string name="menu_config">Info.</string>
-    <string name="weight1">Ingrese Su Peso en kg:</string>
+    <string name="weight1">Ingrese su peso en kg:</string>
     <string name="weight2">Tu peso es:</string>
     <string name="weight3">Mercurio</string>
     <string name="weight4">Venus</string>
@@ -23,4 +23,17 @@
     <string name="back">atrás</string>
     <string name="event">nuevo evento</string>
     <string name="next">siguiente</string>
+    <string name="alert">¿Ir a Wikipedia?</string>
+    <string name="alert_text">Serás redirigido a Wikipedia para obtener más información sobre</string>
+    <string name="go">Ir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="mercury_link">https://es.wikipedia.org/wiki/Mercurio_(planeta)</string>
+    <string name="venus_link">https://es.wikipedia.org/wiki/Venus_(planeta)</string>
+    <string name="mars_link">https://es.wikipedia.org/wiki/Marte_(planeta)</string>
+    <string name="jupiter_link">https://es.wikipedia.org/wiki/Jupiter_(planeta)</string>
+    <string name="saturn_link">https://es.wikipedia.org/wiki/Saturno_(planeta)</string>
+    <string name="uranus_link">https://es.wikipedia.org/wiki/Urano_(planeta)</string>
+    <string name="neptune_link">https://es.wikipedia.org/wiki/Neptuno_(planeta)</string>
+    <string name="pluto_link">https://es.wikipedia.org/wiki/Plut%C3%B3n_(planeta_enano)</string>
+    <string name="moon_link">https://es.wikipedia.org/wiki/Luna</string>
 </resources>

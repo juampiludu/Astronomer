@@ -10,7 +10,7 @@
 
     <string name="home_second" translatable="false">Home Second</string>
 
-    <string name="weight1">Enter Your Weight in kg:</string>
+    <string name="weight1">Enter your weight in kg:</string>
     <string name="weight2">Your weight is:</string>
     <string name="weight3">Mercury</string>
     <string name="weight4">Venus</string>
@@ -22,6 +22,21 @@
     <string name="weight10">Pluto</string>
     <string name="weight11">Moon</string>
     <string name="weight_button">Calculate!</string>
+
+    <string name="alert">Go to Wikipedia?</string>
+    <string name="alert_text">You will be redirected to Wikipedia for more information about</string>
+    <string name="go">Go</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="mercury_link">https://en.wikipedia.org/wiki/Mercury_(planet)</string>
+    <string name="venus_link">https://en.wikipedia.org/wiki/Venus</string>
+    <string name="mars_link">https://en.wikipedia.org/wiki/Mars</string>
+    <string name="jupiter_link">https://en.wikipedia.org/wiki/Jupiter</string>
+    <string name="saturn_link">https://en.wikipedia.org/wiki/Saturn</string>
+    <string name="uranus_link">https://en.wikipedia.org/wiki/Uranus</string>
+    <string name="neptune_link">https://en.wikipedia.org/wiki/Neptune</string>
+    <string name="pluto_link">https://en.wikipedia.org/wiki/Pluto</string>
+    <string name="moon_link">https://en.wikipedia.org/wiki/Moon</string>
 
     <string name="back">back</string>
     <string name="event">new event</string>
