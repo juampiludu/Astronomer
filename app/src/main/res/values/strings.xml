@@ -38,6 +38,10 @@
     <string name="pluto_link">https://en.wikipedia.org/wiki/Pluto</string>
     <string name="moon_link">https://en.wikipedia.org/wiki/Moon</string>
 
+    <string name="error1">The field cannot have only a point</string>
+    <string name="error2">Enter your weight, the field cannot be empty</string>
+    <string name="error3">The number cannot be longer than 10 digits</string>
+
     <string name="back">back</string>
     <string name="event">new event</string>
     <string name="next">next</string>

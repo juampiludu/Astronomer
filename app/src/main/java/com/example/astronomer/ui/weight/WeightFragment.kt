@@ -1,23 +1,20 @@
 package com.example.astronomer.ui.weight
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.Planets
 import com.example.astronomer.R
-import com.example.astronomer.Planets.*
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
@@ -26,6 +23,7 @@ class WeightFragment : Fragment() {
 
     private lateinit var weightViewModel: WeightViewModel
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -33,8 +31,6 @@ class WeightFragment : Fragment() {
     ): View? {
         weightViewModel = ViewModelProviders.of(this).get(WeightViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_weight, container, false)
-
-        val fragmentManager: FragmentManager
 
         val editWeight: TextInputLayout = root.findViewById(R.id.editWeight)
         val buttonWeight: MaterialButton = root.findViewById(R.id.buttonWeight)
@@ -61,12 +57,16 @@ class WeightFragment : Fragment() {
         buttonWeight.setOnClickListener {
 
             val weight = editWeight.editText?.text.toString()
-            if (weight.equals(".")) {
-                editWeight.error = "The input cannot have only a point"
-            } else if (weight.equals("")) {
-                editWeight.error = "Enter your weight, the input cannot be empty"
+
+            if (weight == ".") {
+                val error = getString(R.string.error1)
+                editWeight.error = error
+            } else if (weight == "") {
+                val error = getString(R.string.error2)
+                editWeight.error = error
             } else if (weight.length > 10) {
-                editWeight.error = "The input cannot be longer than 10 digits"
+                val error = getString(R.string.error3)
+                editWeight.error = error
             } else {
 
                 val wght = weight.toFloat()
@@ -90,8 +90,6 @@ class WeightFragment : Fragment() {
                 textMoon.text = "%.2f".format(op9) + " kg"
 
                 editWeight.error = null
-
-
 
             }
 

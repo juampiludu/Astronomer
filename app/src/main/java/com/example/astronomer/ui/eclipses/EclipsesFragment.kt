@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -20,6 +21,9 @@ class EclipsesFragment : Fragment() {
 
     private lateinit var eclipsesViewModel: EclipsesViewModel
 
+    val url = "https://www.timeanddate.com/eclipse/2020"
+    var progressBar: ProgressBar? = null
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -29,9 +33,9 @@ class EclipsesFragment : Fragment() {
             ViewModelProviders.of(this).get(EclipsesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_eclipses, container, false)
 
+        progressBar = root.findViewById(R.id.progressBar)
         val webView: WebView = root.findViewById(R.id.webView)
-        webView.webViewClient = WebViewClient()
-        val url = "https://www.timeanddate.com/eclipse/2020"
+        webView.webViewClient = myWebClient()
         webView.loadUrl(url)
 
         val webSettings: WebSettings = webView.settings
@@ -40,6 +44,8 @@ class EclipsesFragment : Fragment() {
         webSettings.loadsImagesAutomatically = true
         webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
         webSettings.javaScriptEnabled = true
+        webSettings.builtInZoomControls = true
+        webSettings.displayZoomControls = false
 
         val bottomNav: BottomNavigationView = root.findViewById(R.id.bottomNav)
 
@@ -70,6 +76,26 @@ class EclipsesFragment : Fragment() {
         })
 
         return root
+    }
+
+    inner class myWebClient : WebViewClient() {
+
+        override fun shouldOverrideUrlLoading(
+            view: WebView,
+            url: String
+        ): Boolean {
+            progressBar!!.visibility = View.VISIBLE
+            view.loadUrl(url)
+            return true
+        }
+
+        override fun onPageFinished(view: WebView, url: String) {
+            super.onPageFinished(view, url)
+            progressBar!!.visibility = View.GONE
+        }
+
+
+
     }
 
     private fun goBack() {
