@@ -10,22 +10,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.BuildConfig
 import com.example.astronomer.R
 import com.google.android.material.button.MaterialButton
 
 class ConfigFragment : Fragment() {
 
-    private lateinit var configViewModel: ConfigViewModel
-
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        configViewModel =
-                ViewModelProviders.of(this).get(ConfigViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_config, container, false)
 
         val emailButton: MaterialButton = root.findViewById(R.id.emailButton)

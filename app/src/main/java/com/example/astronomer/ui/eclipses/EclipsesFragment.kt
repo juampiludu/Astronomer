@@ -12,25 +12,16 @@ import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import com.example.astronomer.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.fragment_eclipses.*
 
 class EclipsesFragment : Fragment() {
 
-    private lateinit var eclipsesViewModel: EclipsesViewModel
-
-    val url = "https://www.timeanddate.com/eclipse/2020"
+    private val url = "https://www.timeanddate.com/eclipse/2020"
     var progressBar: ProgressBar? = null
 
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        eclipsesViewModel =
-            ViewModelProviders.of(this).get(EclipsesViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_eclipses, container, false)
 
         progressBar = root.findViewById(R.id.progressBar)
