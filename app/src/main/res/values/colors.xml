@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#020b27</color>
     <color name="colorPrimaryLight">#36405f</color>
     <color name="colorAccent">#ffffff</color>
+
+    <color name="colorText">#ffffff</color>
+    <color name="colorIcons">#ffffff</color>
+    <color name="colorNavBar">#020b27</color>
+    <color name="colorBackrounds">#020b27</color>
 </resources>

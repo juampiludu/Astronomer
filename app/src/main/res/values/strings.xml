@@ -50,4 +50,8 @@
     <string name="general_info3">For example in Mars:</string>
     <string name="email_info">Support email</string>
     <string name="version_text"><![CDATA[<u>Version</u>]]></string>
+
+    <string name="day_night_mode">Night Mode</string>
+    <string name="general">General</string>
+    <string name="others">Others</string>
 </resources>

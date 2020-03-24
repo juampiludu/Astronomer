@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    app:itemIconTint="#FFFFFF"
-    app:itemTextColor="#FFFFFF"
+    app:itemIconTint="@color/colorIcons"
+    app:itemTextColor="@color/colorText"
     app:menu="@menu/bottom_nav_menu">
 
 </com.google.android.material.bottomnavigation.BottomNavigationView>

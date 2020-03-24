@@ -14,7 +14,7 @@
         android:fontFamily="@font/carrois_gothic_sc"
         android:text="Astronomer"
         android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorText"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
