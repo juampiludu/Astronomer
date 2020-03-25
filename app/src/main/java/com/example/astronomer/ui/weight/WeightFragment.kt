@@ -3,6 +3,7 @@ package com.example.astronomer.ui.weight
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -166,6 +167,9 @@ class WeightFragment : Fragment() {
     }
 
     private fun materialAlert(title: String, message: String, planet: String, positiveButton: String, link: String, toast: Toast, negativeButton: String) {
+
+        val positiveButton = Html.fromHtml("<font color='#041138'>$positiveButton</font>")
+        val negativeButton = Html.fromHtml("<font color='#041138'>$negativeButton</font>")
 
         MaterialAlertDialogBuilder(context)
             .setTitle(title)
