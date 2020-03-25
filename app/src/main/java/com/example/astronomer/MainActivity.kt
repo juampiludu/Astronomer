@@ -49,10 +49,8 @@ class MainActivity : AppCompatActivity() {
         val buttonSwitch: Button = navView.menu.findItem(R.id.switch1).actionView.findViewById(R.id.buttonSwitch)
 
         val color = getColor(R.color.colorText)
-        val icon = resources.getDrawable(R.drawable.ic_menu_toolbar)
         toolbar.setTitleTextColor(color)
-        icon.setColorFilter(resources.getColor(R.color.colorText), PorterDuff.Mode.SRC_IN)
-        toolbar.navigationIcon = icon
+        toolbar.navigationIcon?.setColorFilter(resources.getColor(R.color.colorText), PorterDuff.Mode.SRC_IN)
 
         spannable1.setSpan(TextAppearanceSpan(this, R.style.TextAppearanceTitle), 0, spannable1.length, 0)
         spannable2.setSpan(TextAppearanceSpan(this, R.style.TextAppearanceTitle), 0, spannable2.length, 0)

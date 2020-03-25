@@ -38,7 +38,7 @@
     <string name="moon_link">https://es.wikipedia.org/wiki/Luna</string>
     <string name="error1">El campo no puede tener solo un punto</string>
     <string name="error2">Ingrese su peso, el campo no puede estar vacío</string>
-    <string name="error3">El número no puede ser mayor de 10 dígitos</string>
+    <string name="error3">El número no puede ser mayor a 10 dígitos</string>
     <string name="day_night_mode">Modo Nocturno</string>
     <string name="general">General</string>
     <string name="others">Otros</string>
