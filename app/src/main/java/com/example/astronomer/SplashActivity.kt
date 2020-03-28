@@ -5,8 +5,6 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.Window
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDelegate
 
 class SplashActivity : AppCompatActivity() {
@@ -23,6 +21,10 @@ class SplashActivity : AppCompatActivity() {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
+
+        val window = window
+        window.statusBarColor = resources.getColor(R.color.colorPrimary)
+        window.navigationBarColor = resources.getColor(R.color.colorPrimary)
 
         supportActionBar!!.hide()
         Handler().postDelayed({

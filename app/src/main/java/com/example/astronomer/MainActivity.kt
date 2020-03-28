@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val share = item.itemId
         val title = getString(R.string.share_option1)
         val extra = getString(R.string.share_option2)
-        val link = "https://bit.ly/3bvO02l"
+        val link = "https://bit.ly/3aswBYb"
 
         if (share == R.id.share) {
 
