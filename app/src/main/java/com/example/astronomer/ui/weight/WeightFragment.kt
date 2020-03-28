@@ -33,6 +33,7 @@ class WeightFragment : Fragment() {
         val textNeptune: TextView = root.findViewById(R.id.textNeptune)
         val textPluto: TextView = root.findViewById(R.id.textPluto)
         val textMoon: TextView = root.findViewById(R.id.textMoon)
+        val textEarth: TextView = root.findViewById(R.id.textEarth)
         val imageMercury: ImageView = root.findViewById(R.id.imageView2)
         val imageVenus: ImageView = root.findViewById(R.id.imageView3)
         val imageMars: ImageView = root.findViewById(R.id.imageView4)
@@ -42,6 +43,7 @@ class WeightFragment : Fragment() {
         val imageNeptune: ImageView = root.findViewById(R.id.imageView8)
         val imagePluto: ImageView = root.findViewById(R.id.imageView9)
         val imageMoon: ImageView = root.findViewById(R.id.imageView10)
+        val imageEarth: ImageView = root.findViewById(R.id.imageEarth)
         val planets = Planets()
 
         buttonWeight.setOnClickListener {
@@ -78,6 +80,7 @@ class WeightFragment : Fragment() {
                 textNeptune.text = "%.2f".format(op7) + " kg"
                 textPluto.text = "%.2f".format(op8) + " kg"
                 textMoon.text = "%.2f".format(op9) + " kg"
+                textEarth.text = "$weight kg"
 
                 editWeight.error = null
 
@@ -160,6 +163,14 @@ class WeightFragment : Fragment() {
             val moon = getString(R.string.weight11)
             val link = getString(R.string.moon_link)
             materialAlert(dialogTitle, dialogText, moon, dialogGo, link, toast, dialogCancel)
+
+        }
+
+        imageEarth.setOnClickListener {
+
+            val earth = getString(R.string.earth)
+            val link = getString(R.string.earth_link)
+            materialAlert(dialogTitle, dialogText, earth, dialogGo, link, toast, dialogCancel)
 
         }
 

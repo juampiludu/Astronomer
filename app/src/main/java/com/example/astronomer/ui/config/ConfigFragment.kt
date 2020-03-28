@@ -38,12 +38,13 @@ class ConfigFragment : Fragment() {
     private fun sendEmail() {
 
         val mailto = "lu.dev.spprt@gmail.com"
+        val emailClient = getString(R.string.email_option)
         val intent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:")).apply {
             putExtra(Intent.EXTRA_EMAIL, arrayOf("$mailto"))
             putExtra(Intent.EXTRA_SUBJECT, "<astronomer-support>")
         }
         try {
-            startActivity(Intent.createChooser(intent, "Choose Email Client"))
+            startActivity(Intent.createChooser(intent, emailClient))
         } catch (e: Exception) {
             Toast.makeText(this.context, e.message, Toast.LENGTH_LONG).show()
         }

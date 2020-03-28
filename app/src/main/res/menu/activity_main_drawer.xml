@@ -34,6 +34,10 @@
                     android:title="@string/day_night_mode"
                     app:actionLayout="@layout/switch_item"
                     app:showAsAction="always" />
+                <item
+                    android:id="@+id/share"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/share"/>
             </group>
         </menu>
     </item>

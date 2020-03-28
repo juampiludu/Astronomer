@@ -1,11 +1,12 @@
 package com.example.astronomer
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.TextAppearanceSpan
-import android.view.View
+import android.view.MenuItem
 import android.widget.Button
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -18,7 +19,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         val spannable2 = SpannableString(others.title)
         val appSettingPrefs: SharedPreferences = getSharedPreferences("AppSettingsPrefs", 0)
         val sharedPrefsEdit: SharedPreferences.Editor = appSettingPrefs.edit()
-        val isNightModeOn: Boolean = appSettingPrefs.getBoolean("NightMode", false)
+        val isNightModeOff: Boolean = appSettingPrefs.getBoolean("NightMode", false)
         val buttonSwitch: Button = navView.menu.findItem(R.id.switch1).actionView.findViewById(R.id.buttonSwitch)
 
         val color = getColor(R.color.colorText)
@@ -59,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         val headerView = navView.getHeaderView(0)
 
-        if(isNightModeOn){
+        if(isNightModeOff){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             buttonSwitch.text = "OFF"
             headerView.setBackgroundResource(R.drawable.header_image)
@@ -69,9 +70,9 @@ class MainActivity : AppCompatActivity() {
             headerView.setBackgroundResource(R.drawable.header_image_day)
         }
 
-        buttonSwitch.setOnClickListener(View.OnClickListener {
+        buttonSwitch.setOnClickListener {
 
-            if(isNightModeOn){
+            if(isNightModeOff){
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 sharedPrefsEdit.putBoolean("NightMode", false)
                 sharedPrefsEdit.apply()
@@ -81,12 +82,33 @@ class MainActivity : AppCompatActivity() {
                 sharedPrefsEdit.apply()
             }
 
-        })
+        }
+
+        val share = navView.menu.findItem(R.id.share)
+        share.setOnMenuItemClickListener {
+            onNavigationItemSelected(share)
+        }
 
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val share = item.itemId
+        val title = getString(R.string.share_option1)
+        val extra = getString(R.string.share_option2)
+        val link = "https://bit.ly/3bvO02l"
+
+        if (share == R.id.share) {
+
+            val shareIntent = Intent(Intent.ACTION_SEND)
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "$extra $link")
+            shareIntent.type = "text/plain"
+            startActivity(Intent.createChooser(shareIntent, title))
+        }
+        return false
     }
 }

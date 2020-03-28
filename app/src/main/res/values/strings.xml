@@ -14,6 +14,7 @@
     <string name="weight2">Your weight is:</string>
     <string name="weight3">Mercury</string>
     <string name="weight4">Venus</string>
+    <string name="earth">Earth</string>
     <string name="weight5">Mars</string>
     <string name="weight6">Jupiter</string>
     <string name="weight7">Saturn</string>
@@ -37,6 +38,7 @@
     <string name="neptune_link">https://en.wikipedia.org/wiki/Neptune</string>
     <string name="pluto_link">https://en.wikipedia.org/wiki/Pluto</string>
     <string name="moon_link">https://en.wikipedia.org/wiki/Moon</string>
+    <string name="earth_link">https://en.wikipedia.org/wiki/Earth</string>
 
     <string name="error1">The field cannot have only a point</string>
     <string name="error2">Enter your weight, the field cannot be empty</string>
@@ -54,4 +56,8 @@
     <string name="day_night_mode">Night Mode</string>
     <string name="general">General</string>
     <string name="others">Others</string>
+    <string name="share">Share</string>
+    <string name="share_option1">Share via...</string>
+    <string name="share_option2">Now you can know your weight on different planets of the Solar System! Download the last version here:</string>
+    <string name="email_option">Choose email client...</string>
 </resources>
