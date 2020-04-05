@@ -7,6 +7,7 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -99,6 +100,7 @@ class WeightFragment : Fragment() {
             val mercury = getString(R.string.weight3)
             val link = getString(R.string.mercury_link)
             materialAlert(dialogTitle, dialogText, mercury, dialogGo, link, toast, dialogCancel)
+           rotateImage(imageMercury)
 
         }
 
@@ -107,6 +109,7 @@ class WeightFragment : Fragment() {
             val venus = getString(R.string.weight4)
             val link = getString(R.string.venus_link)
             materialAlert(dialogTitle, dialogText, venus, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageVenus)
 
         }
 
@@ -115,6 +118,7 @@ class WeightFragment : Fragment() {
             val mars = getString(R.string.weight5)
             val link = getString(R.string.mars_link)
             materialAlert(dialogTitle, dialogText, mars, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageMars)
 
         }
 
@@ -123,6 +127,7 @@ class WeightFragment : Fragment() {
             val jupiter = getString(R.string.weight6)
             val link = getString(R.string.jupiter_link)
             materialAlert(dialogTitle, dialogText, jupiter, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageJupiter)
 
         }
 
@@ -131,7 +136,7 @@ class WeightFragment : Fragment() {
             val saturn = getString(R.string.weight7)
             val link = getString(R.string.saturn_link)
             materialAlert(dialogTitle, dialogText, saturn, dialogGo, link, toast, dialogCancel)
-
+            rotateImage(imageSaturn)
         }
 
         imageUranus.setOnClickListener {
@@ -139,6 +144,7 @@ class WeightFragment : Fragment() {
             val uranus = getString(R.string.weight8)
             val link = getString(R.string.uranus_link)
             materialAlert(dialogTitle, dialogText, uranus, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageUranus)
 
         }
 
@@ -147,6 +153,7 @@ class WeightFragment : Fragment() {
             val neptune = getString(R.string.weight9)
             val link = getString(R.string.neptune_link)
             materialAlert(dialogTitle, dialogText, neptune, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageNeptune)
 
         }
 
@@ -155,6 +162,7 @@ class WeightFragment : Fragment() {
             val pluto = getString(R.string.weight10)
             val link = getString(R.string.pluto_link)
             materialAlert(dialogTitle, dialogText, pluto, dialogGo, link, toast, dialogCancel)
+            rotateImage(imagePluto)
 
         }
 
@@ -163,6 +171,7 @@ class WeightFragment : Fragment() {
             val moon = getString(R.string.weight11)
             val link = getString(R.string.moon_link)
             materialAlert(dialogTitle, dialogText, moon, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageMoon)
 
         }
 
@@ -171,6 +180,7 @@ class WeightFragment : Fragment() {
             val earth = getString(R.string.earth)
             val link = getString(R.string.earth_link)
             materialAlert(dialogTitle, dialogText, earth, dialogGo, link, toast, dialogCancel)
+            rotateImage(imageEarth)
 
         }
 
@@ -194,6 +204,16 @@ class WeightFragment : Fragment() {
             .setNegativeButton(negativeButton, null)
             .show()
 
+    }
+
+    private fun rotateImage(image: ImageView) {
+        val animation = RotateAnimation(
+            0F, 360F,
+            RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+            RotateAnimation.RELATIVE_TO_SELF, 0.5f)
+
+        animation.duration = 1000
+        image.startAnimation(animation)
     }
 
 }

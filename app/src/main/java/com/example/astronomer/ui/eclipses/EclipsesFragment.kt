@@ -1,11 +1,11 @@
 package com.example.astronomer.ui.eclipses
 
 import android.content.Intent
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.provider.CalendarContract
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -24,12 +24,11 @@ class EclipsesFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_eclipses, container, false)
 
+        val bottomNav: BottomNavigationView = root.findViewById(R.id.bottomNav)
         progressBar = root.findViewById(R.id.progressBar)
         val webView: WebView = root.findViewById(R.id.webView)
-        webView.webViewClient = myWebClient()
-        webView.loadUrl(url)
-
         val webSettings: WebSettings = webView.settings
+        webView.webViewClient = MyWebClient()
         webSettings.domStorageEnabled = true
         webSettings.setAppCacheEnabled(true)
         webSettings.loadsImagesAutomatically = true
@@ -37,8 +36,8 @@ class EclipsesFragment : Fragment() {
         webSettings.javaScriptEnabled = true
         webSettings.builtInZoomControls = true
         webSettings.displayZoomControls = false
+        webView.loadUrl(url)
 
-        val bottomNav: BottomNavigationView = root.findViewById(R.id.bottomNav)
 
         bottomNav.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -55,7 +54,7 @@ class EclipsesFragment : Fragment() {
                         )
                         .putExtra(
                             CalendarContract.EXTRA_EVENT_END_TIME,
-                            System.currentTimeMillis() + (60 * 60 * 1000)
+                            System.currentTimeMillis()
                         )
                     startActivity(intent)
                 }
@@ -66,10 +65,14 @@ class EclipsesFragment : Fragment() {
             return@OnNavigationItemSelectedListener true
         })
 
+        //val icon: Drawable = resources.getDrawable(R.drawable.ic_refresh)
+        //icon.setColorFilter(resources.getColor(R.color.colorText), PorterDuff.Mode.SRC_IN)
+        setHasOptionsMenu(true)
+
         return root
     }
 
-    inner class myWebClient : WebViewClient() {
+    inner class MyWebClient : WebViewClient() {
 
         override fun shouldOverrideUrlLoading(
             view: WebView,
@@ -85,13 +88,12 @@ class EclipsesFragment : Fragment() {
             progressBar!!.visibility = View.GONE
         }
 
-
-
     }
 
     private fun goBack() {
         if (webView.canGoBack()) {
             webView.goBack()
+            progressBar!!.visibility = View.VISIBLE
         } else {
             Toast.makeText(this.context, "No pages back", Toast.LENGTH_SHORT).show()
         }
@@ -100,8 +102,36 @@ class EclipsesFragment : Fragment() {
     private fun goNext() {
         if (webView.canGoForward()) {
             webView.goForward()
+            progressBar!!.visibility = View.VISIBLE
         } else {
             Toast.makeText(this.context, "No pages forward", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        super.onPrepareOptionsMenu(menu)
+
+        val item: MenuItem = menu.findItem(R.id.reload)
+        val icon: Drawable = resources.getDrawable(R.drawable.ic_refresh)
+        icon.setColorFilter(resources.getColor(R.color.colorText), PorterDuff.Mode.SRC_IN)
+        item.icon = icon
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.reload_button, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+
+            R.id.reload -> {
+                webView.reload()
+                progressBar!!.visibility = View.VISIBLE
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

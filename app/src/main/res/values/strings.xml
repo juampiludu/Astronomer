@@ -45,7 +45,7 @@
     <string name="error3">The number cannot be longer than 10 digits</string>
 
     <string name="back">back</string>
-    <string name="event">new event</string>
+    <string name="event">add event</string>
     <string name="next">next</string>
 
     <string name="general_info">The equation to know your weight in other planets is:</string>

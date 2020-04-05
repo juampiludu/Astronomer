@@ -21,7 +21,7 @@
     <string name="nav_header_subtitle">¡Mi peso en otros planetas!</string>
     <string name="version_text"><![CDATA[<u>Versión</u>]]></string>
     <string name="back">atrás</string>
-    <string name="event">nuevo evento</string>
+    <string name="event">agregar evento</string>
     <string name="next">siguiente</string>
     <string name="alert">¿Ir a Wikipedia?</string>
     <string name="alert_text">Serás redirigido a Wikipedia para obtener más información sobre</string>
