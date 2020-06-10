@@ -6,7 +6,7 @@
 
     <string name="menu_weight">My Weight</string>
     <string name="menu_eclipses">Next Eclipses</string>
-    <string name="menu_config">Info.</string>
+    <string name="menu_config">About</string>
 
     <string name="home_second" translatable="false">Home Second</string>
 

@@ -6,6 +6,11 @@
         android:id="@+id/reload"
         android:icon="@drawable/ic_refresh"
         android:title="reload"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/add_event"
+        android:icon="@drawable/ic_event"
+        android:title="add event"
+        app:showAsAction="ifRoom" />
 
 </menu>
