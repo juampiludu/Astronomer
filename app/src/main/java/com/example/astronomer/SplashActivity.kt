@@ -12,6 +12,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         val appSettingPrefs: SharedPreferences = getSharedPreferences("AppSettingsPrefs", 0)
         val isNightModeOff: Boolean = appSettingPrefs.getBoolean("NightMode", false)

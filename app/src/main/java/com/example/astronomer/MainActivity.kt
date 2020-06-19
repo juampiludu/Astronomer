@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.TextAppearanceSpan
 import android.view.MenuItem
-import android.widget.Button
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -17,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.nav_weight, R.id.nav_eclipses, R.id.nav_config), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         val menu = navView.menu
         val general = menu.findItem(R.id.general)
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val appSettingPrefs: SharedPreferences = getSharedPreferences("AppSettingsPrefs", 0)
         val sharedPrefsEdit: SharedPreferences.Editor = appSettingPrefs.edit()
         val isNightModeOff: Boolean = appSettingPrefs.getBoolean("NightMode", false)
-        val buttonSwitch: Button = navView.menu.findItem(R.id.switch1).actionView.findViewById(R.id.buttonSwitch)
+        val buttonSwitch: MaterialButton = navView.menu.findItem(R.id.switch1).actionView.findViewById(R.id.buttonSwitch)
 
         val color = getColor(R.color.colorText)
         toolbar.setTitleTextColor(color)

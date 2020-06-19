@@ -8,5 +8,5 @@
     <color name="colorText">#ffffff</color>
     <color name="colorIcons">#ffffff</color>
     <color name="colorNavBar">#020b27</color>
-    <color name="colorBackrounds">#020b27</color>
+    <color name="colorBackgrounds">#020b27</color>
 </resources>

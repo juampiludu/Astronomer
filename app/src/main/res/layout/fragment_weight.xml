@@ -80,7 +80,8 @@
                         android:text="@string/weight_button"
                         android:textColor="@color/colorText"
                         android:textSize="18sp"
-                        app:cornerRadius="32dp" />
+                        app:cornerRadius="32dp"
+                        app:rippleColor="@color/colorText"/>
 
                 </LinearLayout>
 

@@ -100,7 +100,7 @@ class WeightFragment : Fragment() {
             val mercury = getString(R.string.weight3)
             val link = getString(R.string.mercury_link)
             materialAlert(dialogTitle, dialogText, mercury, dialogGo, link, toast, dialogCancel)
-           rotateImage(imageMercury)
+            rotateImage(imageMercury)
 
         }
 
