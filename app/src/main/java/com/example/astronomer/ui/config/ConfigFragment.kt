@@ -7,6 +7,8 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -22,6 +24,21 @@ class ConfigFragment : Fragment() {
         val emailButton: MaterialButton = root.findViewById(R.id.emailButton)
         val textView27: TextView = root.findViewById(R.id.textView27)
         val textVersion: TextView = root.findViewById(R.id.textVersion)
+        val textView22: TextView = root.findViewById(R.id.textView22)
+        val imageView11: ImageView = root.findViewById(R.id.imageView11)
+        val textView24: TextView = root.findViewById(R.id.textView24)
+        val imageView12: ImageView = root.findViewById(R.id.imageView12)
+
+        //animations
+
+        val lefttoright = AnimationUtils.loadAnimation(context, R.anim.lefttoright)
+        textView22.startAnimation(lefttoright)
+        imageView11.startAnimation(lefttoright)
+        textView24.startAnimation(lefttoright)
+        imageView12.startAnimation(lefttoright)
+        emailButton.startAnimation(lefttoright)
+        textView27.startAnimation(lefttoright)
+        textVersion.startAnimation(lefttoright)
 
         textView27.text = Html.fromHtml(resources.getString(R.string.version_text))
         textVersion.text = BuildConfig.VERSION_NAME

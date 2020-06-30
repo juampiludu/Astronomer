@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.PorterDuff
 import android.os.Bundle
+import android.telecom.Call
 import android.text.SpannableString
 import android.text.style.TextAppearanceSpan
 import android.view.MenuItem
@@ -16,6 +17,11 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import com.example.astronomer.ui.config.ConfigFragment
+import com.example.astronomer.ui.eclipses.EclipsesFragment
+import com.example.astronomer.ui.weight.WeightFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
 
@@ -38,6 +44,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.nav_weight, R.id.nav_eclipses, R.id.nav_config), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         val menu = navView.menu

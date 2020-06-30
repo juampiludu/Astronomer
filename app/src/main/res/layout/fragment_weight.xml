@@ -10,6 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="144dp">
 
@@ -40,22 +41,21 @@
                         android:id="@+id/editWeight"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:boxCornerRadiusTopStart="16dp"
-                        app:boxCornerRadiusTopEnd="16dp"
-                        app:boxCornerRadiusBottomStart="16dp"
-                        app:boxCornerRadiusBottomEnd="16dp"
+                        android:textColorHint="#FFFFFF"
                         app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
                         app:boxStrokeColor="#FFFFFF"
-                        app:hintTextColor="#FFFFFF"
                         app:counterEnabled="true"
                         app:counterMaxLength="10"
                         app:counterTextColor="@color/colorAccent"
                         app:endIconMode="clear_text"
                         app:endIconTint="#FFFFFF"
+                        app:hintTextColor="#FFFFFF"
                         app:startIconDrawable="@drawable/ic_arrow_forward"
-                        app:startIconTint="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        >
+                        app:startIconTint="#FFFFFF">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                         android:textColor="@color/colorText"
                         android:textSize="18sp"
                         app:cornerRadius="32dp"
-                        app:rippleColor="@color/colorText"/>
+                        app:rippleColor="@color/colorText" />
 
                 </LinearLayout>
 
@@ -106,9 +106,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight3"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -125,9 +125,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
 
@@ -145,9 +145,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight4"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -164,9 +164,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
 
@@ -184,9 +184,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/earth"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -203,8 +203,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:fontFamily="@font/alegreya_sans"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -223,9 +223,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight11"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -242,8 +242,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:fontFamily="@font/alegreya_sans"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -262,9 +262,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight5"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -281,8 +281,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:fontFamily="@font/alegreya_sans"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -301,9 +301,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight6"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -320,8 +320,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:fontFamily="@font/alegreya_sans"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -340,9 +340,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight7"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -359,9 +359,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
 
@@ -379,9 +379,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight8"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -398,8 +398,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:fontFamily="@font/alegreya_sans"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -418,9 +418,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight9"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -437,9 +437,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />
 
@@ -457,9 +457,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/alegreya_sans"
                         android:gravity="center"
                         android:text="@string/weight10"
-                        android:fontFamily="@font/alegreya_sans"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -476,8 +476,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:fontFamily="@font/alegreya_sans"
+                        android:gravity="center"
                         android:textColor="#FFFFFF"
                         android:textColorLink="@color/colorPrimary"
                         android:textSize="20sp" />

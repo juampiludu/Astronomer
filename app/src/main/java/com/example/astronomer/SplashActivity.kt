@@ -5,14 +5,15 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatDelegate
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         val appSettingPrefs: SharedPreferences = getSharedPreferences("AppSettingsPrefs", 0)
         val isNightModeOff: Boolean = appSettingPrefs.getBoolean("NightMode", false)
@@ -27,11 +28,16 @@ class SplashActivity : AppCompatActivity() {
         window.statusBarColor = resources.getColor(R.color.colorPrimary)
         window.navigationBarColor = resources.getColor(R.color.colorPrimary)
 
+        val fadein = AnimationUtils.loadAnimation(this, R.anim.fadein)
+
+        titleView.startAnimation(fadein)
+        developedByView.startAnimation(fadein)
+
         supportActionBar!!.hide()
         Handler().postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }, 1500)
+        }, 2000)
 
     }
 }
