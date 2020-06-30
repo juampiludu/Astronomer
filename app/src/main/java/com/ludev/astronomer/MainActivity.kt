@@ -1,13 +1,14 @@
-package com.example.astronomer
+package com.ludev.astronomer
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.telecom.Call
+import android.os.Handler
 import android.text.SpannableString
 import android.text.style.TextAppearanceSpan
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -17,11 +18,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import com.example.astronomer.ui.config.ConfigFragment
-import com.example.astronomer.ui.eclipses.EclipsesFragment
-import com.example.astronomer.ui.weight.WeightFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
 
@@ -118,5 +114,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             startActivity(Intent.createChooser(shareIntent, title))
         }
         return false
+    }
+
+    // test
+
+    private var doubleBackPressedOnce = false
+    override fun onBackPressed() {
+        if (doubleBackPressedOnce || fragmentManager.getBackStackEntryCount() != 0) {
+            super.onBackPressed()
+            return
+        }
+
+        this.doubleBackPressedOnce = true
+        Toast.makeText(this, "Press twice to exit", Toast.LENGTH_SHORT).show()
+
+        Handler().postDelayed(Runnable { doubleBackPressedOnce = false }, 1000)
+
     }
 }

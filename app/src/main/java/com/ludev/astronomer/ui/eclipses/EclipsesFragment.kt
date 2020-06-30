@@ -1,4 +1,4 @@
-package com.example.astronomer.ui.eclipses
+package com.ludev.astronomer.ui.eclipses
 
 import android.content.Intent
 import android.graphics.PorterDuff
@@ -11,7 +11,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
-import com.example.astronomer.R
+import com.ludev.astronomer.R
 import kotlinx.android.synthetic.main.fragment_eclipses.*
 
 class EclipsesFragment : Fragment() {

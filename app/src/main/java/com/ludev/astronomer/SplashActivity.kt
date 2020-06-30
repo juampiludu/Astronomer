@@ -1,4 +1,4 @@
-package com.example.astronomer
+package com.ludev.astronomer
 
 import android.content.Intent
 import android.content.SharedPreferences

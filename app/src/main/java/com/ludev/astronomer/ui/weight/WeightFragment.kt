@@ -1,4 +1,4 @@
-package com.example.astronomer.ui.weight
+package com.ludev.astronomer.ui.weight
 
 import android.content.Intent
 import android.net.Uri
@@ -13,8 +13,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.astronomer.Planets
-import com.example.astronomer.R
+import com.ludev.astronomer.Planets
+import com.ludev.astronomer.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
@@ -264,5 +264,7 @@ class WeightFragment : Fragment() {
             image.startAnimation(zoomout)
         }, 300)
     }
+
+
 
 }

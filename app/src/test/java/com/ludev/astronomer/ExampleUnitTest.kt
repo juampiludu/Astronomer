@@ -1,4 +1,4 @@
-package com.example.astronomer
+package com.ludev.astronomer
 
 import org.junit.Test
 

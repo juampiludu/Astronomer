@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_weight"
-        android:name="com.example.astronomer.ui.weight.WeightFragment"
+        android:name="com.ludev.astronomer.ui.weight.WeightFragment"
         android:label="@string/menu_weight"
         tools:layout="@layout/fragment_weight">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.example.astronomer.ui.weight.HomeSecondFragment"
+        android:name="com.ludev.astronomer.ui.weight.HomeSecondFragment"
         android:label="@string/home_second"
         tools:layout="@layout/fragment_home_second">
         <action
@@ -31,13 +31,13 @@
 
     <fragment
         android:id="@+id/nav_eclipses"
-        android:name="com.example.astronomer.ui.eclipses.EclipsesFragment"
+        android:name="com.ludev.astronomer.ui.eclipses.EclipsesFragment"
         android:label="@string/menu_eclipses"
         tools:layout="@layout/fragment_eclipses" />
 
     <fragment
         android:id="@+id/nav_config"
-        android:name="com.example.astronomer.ui.config.ConfigFragment"
+        android:name="com.ludev.astronomer.ui.config.ConfigFragment"
         android:label="@string/menu_config"
         tools:layout="@layout/fragment_config" />
 </navigation>

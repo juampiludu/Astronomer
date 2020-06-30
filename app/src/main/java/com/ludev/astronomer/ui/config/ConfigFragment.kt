@@ -1,4 +1,4 @@
-package com.example.astronomer.ui.config
+package com.ludev.astronomer.ui.config
 
 import android.content.Intent
 import android.net.Uri
@@ -12,8 +12,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.astronomer.BuildConfig
-import com.example.astronomer.R
+import com.ludev.astronomer.BuildConfig
+import com.ludev.astronomer.R
 import com.google.android.material.button.MaterialButton
 
 class ConfigFragment : Fragment() {
