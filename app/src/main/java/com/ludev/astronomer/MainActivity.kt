@@ -3,11 +3,13 @@ package com.ludev.astronomer
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.PorterDuff
+import android.graphics.Typeface
 import android.os.Bundle
 import android.os.Handler
 import android.text.SpannableString
 import android.text.style.TextAppearanceSpan
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -116,19 +118,33 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return false
     }
 
-    // test
+    // for two taps to exit
 
     private var doubleBackPressedOnce = false
     override fun onBackPressed() {
-        if (doubleBackPressedOnce || fragmentManager.getBackStackEntryCount() != 0) {
+        if (doubleBackPressedOnce) {
+            moveTaskToBack(true)
             super.onBackPressed()
             return
         }
 
         this.doubleBackPressedOnce = true
-        Toast.makeText(this, "Press twice to exit", Toast.LENGTH_SHORT).show()
+        val backToast = Toast.makeText(this, "Tap again to exit", Toast.LENGTH_SHORT)
+        customToast(backToast)
 
         Handler().postDelayed(Runnable { doubleBackPressedOnce = false }, 1000)
 
     }
+
+    // setting a function for the custom toast
+
+    fun customToast(mToast: Toast) {
+        val view = mToast.view
+        view.setBackgroundResource(R.drawable.custom_toast)
+        val toastText = mToast.view.findViewById<TextView>(android.R.id.message)
+        toastText.setTextColor(resources.getColor(R.color.colorText))
+        toastText.typeface = Typeface.DEFAULT_BOLD
+        mToast.show()
+    }
+
 }

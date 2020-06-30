@@ -18,6 +18,7 @@ import com.ludev.astronomer.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
+import com.ludev.astronomer.MainActivity
 
 class WeightFragment : Fragment() {
 
@@ -133,7 +134,8 @@ class WeightFragment : Fragment() {
         val dialogText = getString(R.string.alert_text)
         val dialogGo = getString(R.string.go)
         val dialogCancel = getString(R.string.cancel)
-        val toast = Toast.makeText(this.context, "Redirecting...", Toast.LENGTH_SHORT)
+        val toastMessage = getString(R.string.redirecting)
+        val toast = Toast.makeText(this.context, toastMessage, Toast.LENGTH_SHORT)
 
         val zoomin = AnimationUtils.loadAnimation(context, R.anim.zoomin)
 
@@ -252,7 +254,7 @@ class WeightFragment : Fragment() {
                 val uri = Uri.parse(link)
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 startActivity(intent)
-                toast.show()}
+                (activity as MainActivity).customToast(toast)}
             .setNegativeButton(negativeButton, null)
             .show()
 
@@ -262,7 +264,7 @@ class WeightFragment : Fragment() {
         val zoomout = AnimationUtils.loadAnimation(context, R.anim.zoomout)
         Handler().postDelayed({
             image.startAnimation(zoomout)
-        }, 300)
+        }, 600)
     }
 
 

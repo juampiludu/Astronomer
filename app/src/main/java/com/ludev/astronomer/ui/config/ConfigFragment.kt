@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import com.ludev.astronomer.BuildConfig
 import com.ludev.astronomer.R
 import com.google.android.material.button.MaterialButton
+import com.ludev.astronomer.MainActivity
 
 class ConfigFragment : Fragment() {
 
@@ -63,7 +64,8 @@ class ConfigFragment : Fragment() {
         try {
             startActivity(Intent.createChooser(intent, emailClient))
         } catch (e: Exception) {
-            Toast.makeText(this.context, e.message, Toast.LENGTH_LONG).show()
+            val toast = Toast.makeText(this.context, e.message, Toast.LENGTH_LONG)
+            (activity as MainActivity).customToast(toast)
         }
 
     }

@@ -48,4 +48,5 @@
     <string name="earth">Tierra</string>
     <string name="earth_link">https://es.wikipedia.org/wiki/Tierra</string>
     <string name="email_option">Elegí el cliente email…</string>
+    <string name="redirecting">Redireccionando…</string>
 </resources>
