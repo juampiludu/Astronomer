@@ -58,9 +58,17 @@
     <string name="others">Others</string>
     <string name="share">Share</string>
     <string name="share_option1">Share via…</string>
-    <string name="share_option2">Now you can know your weight on different planets of the Solar System! Download the last version here:</string>
+    <string name="share_option2">Find out your weight on different planets of the Solar System! Download the last version here:</string>
     <string name="email_option">Choose email client…</string>
 
     <string name="redirecting">Redirecting…</string>
+
+    <string name="langText">Change Language:</string>
+    <string name="langTitle">Select Language</string>
+    <string name="spanish">Spanish</string>
+    <string name="english">English</string>
+    <string name="langSelect">Select</string>
+
+    <string name="tapAgain">Tap again to exit</string>
 
 </resources>

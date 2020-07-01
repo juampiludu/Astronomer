@@ -7,101 +7,129 @@
     android:background="@drawable/back3"
     tools:context=".ui.config.ConfigFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView22"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alegreya_sans"
-            android:gravity="center"
-            android:text="@string/general_info"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/example1" />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/alegreya_sans"
-            android:gravity="center"
-            android:text="@string/general_info3"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:gravity="center"
+                    android:text="@string/general_info"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/example2" />
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/example1" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:gravity="center"
+                    android:text="@string/general_info3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/emailButton"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="100dp"
-        android:text="@string/email_info"
-        android:textSize="12sp"
-        app:backgroundTint="@color/material_on_background_disabled"
-        app:icon="@drawable/ic_mail"
-        app:layout_constraintBottom_toTopOf="@+id/textView27"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/example2" />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
-        android:fontFamily="@font/alegreya_sans"
-        android:gravity="center"
-        android:text="@string/version_text"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textVersion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/alegreya_sans"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:layout_constraintVertical_bias="0.198" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/emailButton"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="80dp"
+                android:text="@string/email_info"
+                android:textSize="12sp"
+                app:backgroundTint="@color/material_on_background_disabled"
+                app:icon="@drawable/ic_mail" />
+
+            <TextView
+                android:id="@+id/langTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:textSize="18dp"
+                android:text="@string/langText"
+                android:textColor="#ffffff" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/langButton"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="80dp"
+                app:icon="@drawable/ic_language"
+                app:backgroundTint="@color/material_on_background_disabled"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sans"
+                android:gravity="center"
+                android:text="@string/version_text"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

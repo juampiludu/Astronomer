@@ -1,5 +1,6 @@
 package com.ludev.astronomer
 
+import android.app.Activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.PorterDuff
@@ -11,17 +12,19 @@ import android.text.style.TextAppearanceSpan
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.Toolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
+import java.util.*
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,6 +32,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // getting the language selected option from ConfigFragment
+
+        val intent = intent
+
+        if (intent.hasExtra("lang")) {
+            val lang = intent.getStringExtra("lang")
+            setLanguage(lang)
+            loadLocale()
+        } else {
+
+        }
+
+        loadLocale()
+
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -129,7 +147,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         this.doubleBackPressedOnce = true
-        val backToast = Toast.makeText(this, "Tap again to exit", Toast.LENGTH_SHORT)
+        val toastText = resources.getString(R.string.tapAgain)
+        val backToast = Toast.makeText(this, toastText, Toast.LENGTH_SHORT)
         customToast(backToast)
 
         Handler().postDelayed(Runnable { doubleBackPressedOnce = false }, 1000)
@@ -145,6 +164,41 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toastText.setTextColor(resources.getColor(R.color.colorText))
         toastText.typeface = Typeface.DEFAULT_BOLD
         mToast.show()
+    }
+
+    // language function
+
+    private fun setLanguage(localeCode: String) {
+
+        val res = resources
+        val dm = res.displayMetrics
+        val conf = res.configuration
+
+        conf.setLocale(Locale(localeCode.toLowerCase()))
+        saveLocale(localeCode)
+        res.updateConfiguration(conf, dm)
+
+    }
+
+    private fun loadLocale() {
+        val langPref = "Language"
+        val prefs = getSharedPreferences(
+            "CommonPrefs",
+            Activity.MODE_PRIVATE
+        )
+        val language = prefs.getString(langPref, "en")
+        setLanguage(language.toString())
+    }
+
+    private fun saveLocale(lang: String?) {
+        val langPref = "Language"
+        val prefs = getSharedPreferences(
+            "CommonPrefs",
+            Activity.MODE_PRIVATE
+        )
+        val editor = prefs.edit()
+        editor.putString(langPref, lang)
+        editor.commit()
     }
 
 }

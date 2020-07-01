@@ -44,9 +44,15 @@
     <string name="others">Otros</string>
     <string name="share">Compartir</string>
     <string name="share_option1">Compartir vía…</string>
-    <string name="share_option2">¡Ahora podés saber tu peso en los diferentes planetas del Sistema Solar! Descargá la última versión acá:</string>
+    <string name="share_option2">¡Enteráte cuál es tu peso en los diferentes planetas del Sistema Solar! Descargá la última versión acá:</string>
     <string name="earth">Tierra</string>
     <string name="earth_link">https://es.wikipedia.org/wiki/Tierra</string>
     <string name="email_option">Elegí el cliente email…</string>
     <string name="redirecting">Redireccionando…</string>
+    <string name="langText">Cambiar Idioma:</string>
+    <string name="langTitle">Seleccionar Lenguaje</string>
+    <string name="spanish">Español</string>
+    <string name="english">Inglés</string>
+    <string name="langSelect">Seleccionar</string>
+    <string name="tapAgain">Presiona de nuevo para salir</string>
 </resources>
