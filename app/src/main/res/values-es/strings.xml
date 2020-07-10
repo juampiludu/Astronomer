@@ -55,4 +55,5 @@
     <string name="english">Inglés</string>
     <string name="langSelect">Seleccionar</string>
     <string name="tapAgain">Presiona de nuevo para salir</string>
+    <string name="share_link">https://astronomer.es.uptodown.com/android</string>
 </resources>

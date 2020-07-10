@@ -59,6 +59,7 @@
     <string name="share">Share</string>
     <string name="share_option1">Share via…</string>
     <string name="share_option2">Find out your weight on different planets of the Solar System! Download the last version here:</string>
+    <string name="share_link">https://astronomer.en.uptodown.com/android</string>
     <string name="email_option">Choose email client…</string>
 
     <string name="redirecting">Redirecting…</string>

@@ -31,8 +31,6 @@ class EclipsesFragment : Fragment() {
         webSettings.loadsImagesAutomatically = true
         webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
         webSettings.javaScriptEnabled = true
-        webSettings.builtInZoomControls = true
-        webSettings.displayZoomControls = false
         webView.loadUrl(url)
 
         setHasOptionsMenu(true)

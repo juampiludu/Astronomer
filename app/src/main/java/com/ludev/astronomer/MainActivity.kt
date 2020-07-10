@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (intent.hasExtra("lang")) {
             val lang = intent.getStringExtra("lang")
             setLanguage(lang)
-            loadLocale()
         } else {
 
         }
@@ -124,7 +123,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val share = item.itemId
         val title = getString(R.string.share_option1)
         val extra = getString(R.string.share_option2)
-        val link = "https://bit.ly/37lyVzO"
+        val link = getString(R.string.share_link)
 
         if (share == R.id.share) {
 
@@ -186,7 +185,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             "CommonPrefs",
             Activity.MODE_PRIVATE
         )
-        val language = prefs.getString(langPref, "en")
+        val language = prefs.getString(langPref, "")
         setLanguage(language.toString())
     }
 

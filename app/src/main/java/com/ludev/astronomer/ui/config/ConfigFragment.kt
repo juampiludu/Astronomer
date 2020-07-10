@@ -111,10 +111,12 @@ class ConfigFragment : Fragment() {
                     // en
                     intent.putExtra("lang", "en")
                     startActivity(intent)
+                    (activity as MainActivity).finish()
                 } else if (lang == text2) {
                     // es
                     intent.putExtra("lang", "es")
                     startActivity(intent)
+                    (activity as MainActivity).finish()
                 }
             }
 
