@@ -1,6 +1,7 @@
 package com.ludev.astronomer.ui.eclipses
 
 import android.content.Intent
+import android.content.res.Resources
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -10,13 +11,15 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
+import androidx.core.os.ConfigurationCompat
 import androidx.fragment.app.Fragment
 import com.ludev.astronomer.R
 import kotlinx.android.synthetic.main.fragment_eclipses.*
+import java.util.*
 
 class EclipsesFragment : Fragment() {
 
-    private val url = "https://astronomerweb.pythonanywhere.com/X9VMTFaGCKp5WMp8HDL/"
+    private val year = Calendar.getInstance().get(Calendar.YEAR)
     var progressBar: ProgressBar? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -31,7 +34,7 @@ class EclipsesFragment : Fragment() {
         webSettings.loadsImagesAutomatically = true
         webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
         webSettings.javaScriptEnabled = true
-        webView.loadUrl(url)
+        webView.loadUrl(getString(R.string.eclipses_link)+year.toString())
 
         setHasOptionsMenu(true)
 

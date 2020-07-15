@@ -49,7 +49,7 @@
     <string name="next">next</string>
 
     <string name="general_info">The equation to know your weight in other planets is:</string>
-    <string name="general_info3">For example in Mars:</string>
+    <string name="general_info3">For example, in Mars:</string>
     <string name="email_info">Support email</string>
     <string name="version_text"><![CDATA[<u>Version</u>]]></string>
 
@@ -71,5 +71,6 @@
     <string name="langSelect">Select</string>
 
     <string name="tapAgain">Tap again to exit</string>
+    <string name="eclipses_link">https://astronomerweb.pythonanywhere.com/en/X9VMTFaGCKp5WMp8HDL/selected-year=</string>
 
 </resources>

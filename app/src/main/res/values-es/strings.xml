@@ -16,7 +16,7 @@
     <string name="weight11">Luna</string>
     <string name="weight_button">¡Calcular!</string>
     <string name="general_info">La ecuación para saber tu peso en otros planetas es:</string>
-    <string name="general_info3">Por ejemplo en Marte:</string>
+    <string name="general_info3">Por ejemplo, en Marte:</string>
     <string name="email_info">Email de soporte</string>
     <string name="nav_header_subtitle">¡Mi peso en otros planetas!</string>
     <string name="version_text"><![CDATA[<u>Versión</u>]]></string>
@@ -56,4 +56,5 @@
     <string name="langSelect">Seleccionar</string>
     <string name="tapAgain">Presiona de nuevo para salir</string>
     <string name="share_link">https://astronomer.es.uptodown.com/android</string>
+    <string name="eclipses_link">https://astronomerweb.pythonanywhere.com/es/X9VMTFaGCKp5WMp8HDL/selected-year=</string>
 </resources>
